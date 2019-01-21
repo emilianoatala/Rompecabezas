@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BMO Arcade</title>
+    <link rel="stylesheet" href="css/juego.css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+  </head>
+
+  <body>  
+    <div class="contenedor-izquierdo">
+      <div id="volver">
+        <i class="fas fa-arrow-left" onclick="volverAInicio()"></i>
+      </div>
+      <div id="contenedorMenu">
+        <div class="titulo" onclick="menu()">
+          <img src="images/titulo.png"  title="Desplega el Menu para elegir el juego" alt="titulo">
+        </div>
+        <div class="box-menu" id="menu" style="display: none;">
+          <ul>
+            <li id="menu-li1" onclick="cargarDescripcion('0')" onmouseover="ejecutarSonido()">ESPEJOS</li>
+            <li id="menu-li2" onclick="cargarDescripcion('1')" onmouseover="ejecutarSonido()">PATINETAS</li>
+            <li id="menu-li3" onclick="cargarDescripcion('2')" onmouseover="ejecutarSonido()">ALEGRIA</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cuerpo-contenedor">
+      <div id="box-rompecabezas">
+        <audio id="audio" src="sound/selector.mp3"></audio>
+        <div class="box-descripcion" id="caja-descripcion">
+          <h2 id="tituloDescriptivo"></h2>
+          <p id="descripcion"></p>
+          <div class="box-boton">
+            <button id="boton" onclick="cargarRompecabezas()">
+              <h4>JUGAR!</h4>
+            </button>
+          </div>
+        </div>
+        <div class="rompecabezas">
+          <img id="imgRompecabezas" src=""  alt="rompecabezas">
+        </div>
+      </div>
+
+      <div class="col-40" id="col40">
+        <div id="titulo">
+          <h1 id="tituloJuego"></h1>
+        </div>
+        <div id="instrucciones">
+          <h4>Instrucciones:</h4>
+          <ul id="lista-instrucciones">
+          </ul>
+        </div>
+        <div id="objetivo">
+          <h4>Objetivo</h4>
+          <div class="texto-centrado">
+            <img id="img-objetivo" src=""  alt="objetivo">
+          </div>
+        </div>
+        <div id="ultimo-mov">
+          <h4>Ultimo Movimiento</h4>
+          <div id="flecha" class="texto-centrado"></div>
+        </div>  
+      </div>
+
+      <div class="col-60"id="col60">
+        <div class="box-victoria" id="victoria">
+          <img src="images/victoria.gif" alt="">
+          <h2 id="felicidades">FELICITACIONES! HAS GANADO EL JUEGO</h2>
+          <h4 id="cantidadDeMovimientos"></h4>
+        </div>
+        <div id="juego">
+          <div class="pieza" id="pieza1">
+            <img id="pieza-1" src="" alt="pieza">
+          </div>
+          <div class="pieza" id="pieza2">
+            <img id="pieza-2" src="" alt="pieza">
+          </div>
+          <div class="pieza" id="pieza3">
+            <img id="pieza-3" src="" alt="pieza">
+          </div>
+          <div class="pieza" id="pieza4">
+            <img id="pieza-4" src="" alt="pieza">
+          </div>
+          <div class="pieza" id="pieza5">
+            <img id="pieza-5" src="" alt="pieza">
+          </div>
+          <div class="pieza" id="pieza6">
+            <img id="pieza-6" src="" alt="pieza">
+          </div>
+          <div class="pieza" id="pieza7">
+            <img id="pieza-7" src="" alt="pieza">
+          </div>
+          <div class="pieza" id="pieza8">
+            <img id="pieza-8" src="" alt="pieza">
+          </div>
+          <div class="pieza" id="pieza9">
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <h4>©2018 By Emiliano Atala. Todos los derechos reservados.</h4>   
+      </div>
+    </div> 
+    <div class="contenedor-derecho"></div>
+    
+    <script src="js/juego.js"></script>
+  </body>
+</html>
